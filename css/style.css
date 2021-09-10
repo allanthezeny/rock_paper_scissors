@@ -1,0 +1,813 @@
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: "Open Sans";
+}
+
+html{
+  height:100%;
+  width:100%;
+  margin: 0 auto;
+  padding:0 auto;
+}
+
+body{
+  height:100%;
+  width:100%;
+  background: rgb(30,35,77);
+  background: radial-gradient(circle, rgba(30,35,77,1) 0%, rgba(22,28,62,1) 100%);
+  padding: 20px;
+}
+
+/*Parte codigo desktop*/
+@media screen and (min-width: 1000px){
+
+    .blank{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: rgba(30,30,30,0.5);
+      z-index:10;
+    }
+    .container_rules{
+       position: absolute;
+       width: 350px;
+       left: 37%;
+       top: 0px;
+       z-index:20;
+       margin-top: 10%;
+       height: 0 auto;
+       border-radius: 5px;
+       background: #fff;
+       padding: 25px;
+    }
+      .container_rules .close label{
+        float: left;
+        font-size: 25px;
+        font-weight: bold;
+        color: #444;
+      }
+        .container_rules .close button{
+          float: right;
+          border: none;
+          background: none;
+        }
+        .container_rules .image-rules{
+          border:solid 3px #ddd;
+          margin-top: 50px;
+          border: none;
+          background: none;
+        }
+          .container_rules .image-rules img{
+            width: 100%;
+          }
+
+    .scoreboard{
+      border-radius: 8px;
+      height: 0 auto;
+      padding: 15px;
+      border: solid 2px #ddd;
+    }
+      .scoreboard .label{
+        font-size: 32px;
+        line-height: 28px;
+        font-weight: 900 !important;
+        color: #fff;
+      }
+      .scoreboard .score{
+        text-align: center;
+        padding: 10px;
+        background: #fff;
+        border-radius: 8px;
+      }
+        .scoreboard .score .score_label{
+          font-size: 14px;
+          font-weight: bold;
+          color: rgba(30,35,77,1);
+        }
+        .scoreboard .score .value{
+          font-size: 30px;
+          font-weight: bold;
+        }
+
+
+    .rules{
+       padding: 30px;
+    }
+      .rules button{
+          border-radius: 8px;
+          border: solid 2px #ddd;
+          background: none;
+          color: #fff;
+      }
+
+
+    .game_hands{
+        margin-top: 50px !important;
+    }
+      .game_hands .triangle{
+        position: absolute;
+        z-index: -10;
+        height: 200px;
+        width: 260px;
+        margin: 90px;
+      }
+      .game_hands .triangle img{
+        width: 100%;
+        height: 100%;
+      }
+      .game_hands .hand_scissors,
+        .game_hands .hand_rock,
+          .game_hands .hand_paper{
+        border-radius: 50%;
+        padding: 0px;
+        height: 160px;
+        width: 160px;
+      }
+        .game_hands button{
+          left: 0px;
+          height: 160px;
+          width: 160px;
+          border-radius: 50%;
+          margin:0px;
+          background: #fff;
+        }
+        .game_hands .hand_scissors img,
+          .game_hands .hand_rock img,
+            .game_hands .hand_paper img{
+        }
+      .game_hands .hand_scissors button{
+        border: solid 15px #efa520;
+      }
+        .game_hands .hand_scissors button:hover{
+          border: solid 15px #f1a112;
+        }
+      .game_hands .hand_rock{
+        margin-top: 40px;
+      }
+      .game_hands .hand_rock button{
+          border: solid 15px #e03c5b;
+      }
+        .game_hands .hand_rock button:hover{
+            border: solid 15px #e4274b;
+         }
+      .game_hands .hand_paper button{
+          border: solid 15px #506ff5;
+      }
+        .game_hands .hand_paper button:hover{
+            border: solid 15px #3659f0;
+        }
+
+
+   .game_hands_choosed{
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      margin-top: 50px !important;
+      height: 0 auto;
+      transition: width 2s;
+      width: 0 auto;
+      max-width: 900px;
+   }
+     .game_hands_choosed .hand_scissors button,
+      .game_hands_choosed .hand_rock button,
+        .game_hands_choosed .hand_paper button{
+       height: 250px;
+       width: 250px;
+       border-radius: 50%;
+       margin:0px;
+       background: #fff;
+     }
+     .game_hands_choosed .hand_none button{
+       height: 190px;
+       width: 190px;
+       border-radius: 50%;
+       margin-top:30px;
+       background: rgba(00, 00, 50, 0.5);
+     }
+     .game_hands_choosed .you_picked,
+      .game_hands_choosed .house_picked{
+       padding: 20px;
+       height: 0 auto;
+       width: 300px;
+       margin:0px;
+       text-align: center;
+     }
+
+    .game_hands_choosed .result_game{
+       width: 220px;
+       padding: 0px;
+       text-align: center;
+       position: relative;
+       transform: translateY(35%);
+    }
+      .game_hands_choosed .result_game .you_win_lose{
+         margin: 0px;
+         width: 220px;
+      }
+        .game_hands_choosed .result_game .you_win_lose label{
+           font-size: 35px;
+           color: #fff;
+           font-weight: bold;
+        }
+      .game_hands_choosed .result_game .btn{
+         margin: 0px;
+         width: 220px;
+         padding: 0px;
+         margin-top: 20px;
+      }
+        .game_hands_choosed .result_game .btn button{
+          width: 220px;
+          height: 40px;
+          margin: 0px;
+          border:none;
+          border-radius: 6px;
+          color: none;
+        }
+          .game_hands_choosed .result_game .btn button:hover{
+             color: #d00;
+          }
+
+
+
+
+
+        .game_hands_choosed .house_picked label,
+          .game_hands_choosed .you_picked label{
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-top:20px;
+            margin-bottom: 30px;
+        }
+       .game_hands_choosed .hand_scissors img,
+         .game_hands_choosed .hand_rock img,
+           .game_hands_choosed .hand_paper img{
+               height: 80px;
+       }
+
+         .game_hands_choosed .hand_scissors button{
+           border: solid 20px #efa520;
+         }
+         .game_hands_choosed .hand_rock button{
+             border: solid 20px #e03c5b;
+         }
+         .game_hands_choosed .hand_paper button{
+             border: solid 20px #506ff5;
+         }
+         .game_hands_choosed .hand_none button{
+             border: none;
+         }
+
+}
+
+/*parte codigo tablet*/
+@media screen and (max-width: 999px){
+
+
+
+      .blank{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(30,30,30,0.5);
+        z-index:10;
+      }
+      .container_rules{
+         position: absolute;
+         width: 350px;
+         left: 37%;
+         top: 0px;
+         z-index:20;
+         margin-top: 10%;
+         height: 0 auto;
+         border-radius: 5px;
+         background: #fff;
+         padding: 25px;
+      }
+        .container_rules .close label{
+          float: left;
+          font-size: 25px;
+          font-weight: bold;
+          color: #444;
+        }
+          .container_rules .close button{
+            float: right;
+            border: none;
+            background: none;
+          }
+          .container_rules .image-rules{
+            border:solid 3px #ddd;
+            margin-top: 50px;
+            border: none;
+            background: none;
+          }
+            .container_rules .image-rules img{
+              width: 100%;
+            }
+
+
+
+
+      .scoreboard{
+        border-radius: 5px;
+        height: 0 auto;
+        padding: 15px;
+        border: solid 2px #ddd;
+      }
+        .scoreboard .label{
+          font-size: 32px;
+          line-height: 28px;
+          font-weight: 900 !important;
+          color: #fff;
+        }
+        .scoreboard .score{
+          text-align: center;
+          padding: 10px;
+          background: #fff;
+          border-radius: 5px;
+        }
+          .scoreboard .score .score_label{
+            font-size: 14px;
+            font-weight: bold;
+            color: rgba(30,35,77,1);
+          }
+          .scoreboard .score .value{
+            font-size: 30px;
+            font-weight: bold;
+          }
+
+          .rules{
+             padding: 30px;
+          }
+            .rules button{
+                border-radius: 8px;
+                border: solid 2px #ddd;
+                background: none;
+                color: #fff;
+            }
+
+
+                .game_hands{
+                    margin-top: 50px !important;
+                }
+                  .game_hands .triangle{
+                    position: absolute;
+                    z-index: -10;
+                    height: 200px;
+                    width: 260px;
+                    margin: 90px;
+                  }
+                  .game_hands .triangle img{
+                    width: 100%;
+                    height: 100%;
+                  }
+                  .game_hands .hand_scissors,
+                    .game_hands .hand_rock,
+                      .game_hands .hand_paper{
+                    border-radius: 50%;
+                    padding: 0px;
+                    height: 160px;
+                    width: 160px;
+                  }
+                    .game_hands button{
+                      left: 0px;
+                      height: 160px;
+                      width: 160px;
+                      border-radius: 50%;
+                      margin:0px;
+                      background: #fff;
+                    }
+                    .game_hands .hand_scissors img,
+                      .game_hands .hand_rock img,
+                        .game_hands .hand_paper img{
+                    }
+                  .game_hands .hand_scissors button{
+                    border: solid 15px #ff0;
+                  }
+                    .game_hands .hand_scissors button:hover{
+                      border: solid 15px #ff3;
+                    }
+                  .game_hands .hand_rock{
+                    margin-top: 40px;
+                  }
+                  .game_hands .hand_rock button{
+                      border: solid 15px #f10;
+                  }
+                    .game_hands .hand_rock button:hover{
+                        border: solid 15px #f30;
+                     }
+                  .game_hands .hand_paper button{
+                      border: solid 15px #0af;
+                  }
+                    .game_hands .hand_paper button:hover{
+                        border: solid 15px #0cf;
+                    }
+
+
+
+                       .game_hands_choosed{
+                          left: 50%;
+                          position: relative;
+                          transform: translateX(-50%);
+                          margin-top: 50px !important;
+                          height: 0 auto;
+                          transition: width 2s;
+                          width: 0 auto;
+                          max-width: 900px;
+                       }
+                         .game_hands_choosed .hand_scissors button,
+                          .game_hands_choosed .hand_rock button,
+                            .game_hands_choosed .hand_paper button{
+                           height: 250px;
+                           width: 250px;
+                           border-radius: 50%;
+                           margin:0px;
+                           background: #fff;
+                         }
+                         .game_hands_choosed .hand_none button{
+                           height: 190px;
+                           width: 190px;
+                           border-radius: 50%;
+                           margin-top:30px;
+                           background: rgba(00, 00, 50, 0.5);
+                         }
+                         .game_hands_choosed .you_picked,
+                          .game_hands_choosed .house_picked{
+                           padding: 20px;
+                           height: 0 auto;
+                           width: 300px;
+                           margin:0px;
+                           text-align: center;
+                         }
+
+                        .game_hands_choosed .result_game{
+                           width: 220px;
+                           padding: 0px;
+                           text-align: center;
+                           position: relative;
+                           transform: translateY(35%);
+                        }
+                          .game_hands_choosed .result_game .you_win_lose{
+                             margin: 0px;
+                             width: 220px;
+                          }
+                            .game_hands_choosed .result_game .you_win_lose label{
+                               font-size: 35px;
+                               color: #fff;
+                               font-weight: bold;
+                            }
+                          .game_hands_choosed .result_game .btn{
+                             margin: 0px;
+                             width: 220px;
+                             padding: 0px;
+                             margin-top: 20px;
+                          }
+                            .game_hands_choosed .result_game .btn button{
+                              width: 220px;
+                              height: 40px;
+                              margin: 0px;
+                              border:none;
+                              border-radius: 6px;
+                              color: none;
+                            }
+                              .game_hands_choosed .result_game .btn button:hover{
+                                 color: #d00;
+                              }
+
+
+
+
+
+                            .game_hands_choosed .house_picked label,
+                              .game_hands_choosed .you_picked label{
+                                font-size: 20px;
+                                font-weight: bold;
+                                color: #fff;
+                                margin-top:20px;
+                                margin-bottom: 30px;
+                            }
+                           .game_hands_choosed .hand_scissors img,
+                             .game_hands_choosed .hand_rock img,
+                               .game_hands_choosed .hand_paper img{
+                                   height: 80px;
+                           }
+                             .game_hands_choosed .hand_scissors button{
+                               border: solid 20px #efa520;
+                             }
+                             .game_hands_choosed .hand_rock button{
+                                 border: solid 20px #e03c5b;
+                             }
+                             .game_hands_choosed .hand_paper button{
+                                 border: solid 20px #506ff5;
+                             }
+                             .game_hands_choosed .hand_none button{
+                                 border: none;
+                             }
+
+}
+
+/*parte codigo mobile*/
+@media screen and (max-width: 750px){
+
+
+      .blank{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 0px;
+        background: rgba(30,30,30,0.5);
+        z-index:10;
+      }
+      .container_rules{
+         position: absolute;
+         top: -50px;
+         bottom: 0px;
+         left: 0px;
+         width: 100%;
+         height: 100%;
+         z-index:20;
+         background: #fff;
+         padding: 25px;
+         text-align: center;
+      }
+        .container_rules .close{
+          text-align: center;
+          width: 100%;
+        }
+
+        .container_rules .close label{
+          font-size: 25px;
+          font-weight: bold;
+          margin-top: 40px;
+          margin-bottom: 40px;
+          width: 20%;
+          margin-left: 40%;
+          color: #444;
+        }
+          .container_rules .close button{
+            position: absolute;
+            left: 0px;
+            bottom: 70px;
+            border: none;
+            background: none;
+            width: 20%;
+            margin-left: 40%; 
+          }
+          .container_rules .image-rules{
+            margin-top: 150px;
+            border: none;
+            background: none;
+          }
+            .container_rules .image-rules img{
+              width: 70%;
+            }
+
+
+
+
+      .scoreboard{
+        border-radius: 5px;
+        height: 0 auto;
+        padding: 15px;
+        border: solid 2px #ddd;
+      }
+        .scoreboard .label{
+          font-size: 32px;
+          line-height: 28px;
+          font-weight: 900 !important;
+          color: #fff;
+        }
+        .scoreboard .score{
+          text-align: center;
+          padding: 10px;
+          background: #fff;
+          border-radius: 5px;
+        }
+          .scoreboard .score .score_label{
+            font-size: 14px;
+            font-weight: bold;
+            color: rgba(30,35,77,1);
+          }
+          .scoreboard .score .value{
+            font-size: 30px;
+            font-weight: bold;
+          }
+
+          .rules{
+             position: absolute;
+             margin-top: 20px;
+             top: 520px;
+             width: 80%;
+             left: 14%;
+             padding: 30px;
+          }
+            .rules button{
+                width: 120px;
+                border-radius: 8px;
+                background: none;
+                color: #fff;
+            }
+
+
+                .game_hands{
+                    margin-top: 50px !important;
+                    margin-left: 3px !important;
+                }
+                  .game_hands .triangle{
+                    position: fixed;
+                    z-index: -10;
+                    height: 240px;
+                    top: 140px;
+                    left: 8%;
+                    width: 50%;
+                  }
+                  .game_hands .triangle img{
+                    width: 100%;
+                    height: 100%;
+                  }
+                  .game_hands .hand_scissors,
+                    .game_hands .hand_rock,
+                      .game_hands .hand_paper{
+                    border-radius: 0%;
+                    padding: 0px;
+                    height: auto;
+                    text-align: center;
+                  }
+                  .game_hands .hand_paper{
+                    width: 50%;
+                  }
+                  .game_hands .hand_scissors{
+                      width: 50%;
+                  }
+                  .game_hands .hand_rock{
+                      width: 50%;
+                  }
+
+
+                    .game_hands button{
+                      left: 0px;
+                      height: 120px;
+                      width: 120px;
+                      border-radius: 50%;
+                      margin:0px;
+                      background: #fff;
+                    }
+                    .game_hands .hand_scissors img,
+                      .game_hands .hand_rock img,
+                        .game_hands .hand_paper img{
+                    }
+                  .game_hands .hand_scissors button{
+                    border: solid 15px #ff0;
+                  }
+                    .game_hands .hand_scissors button:hover{
+                      border: solid 15px #ff3;
+                    }
+                  .game_hands .hand_rock{
+                    margin-top: 40px;
+                  }
+                  .game_hands .hand_rock button{
+                      border: solid 15px #f10;
+                  }
+                    .game_hands .hand_rock button:hover{
+                        border: solid 15px #f30;
+                     }
+                  .game_hands .hand_paper button{
+                      border: solid 15px #0af;
+                  }
+                    .game_hands .hand_paper button:hover{
+                        border: solid 15px #0cf;
+                    }
+
+                       .game_hands_choosed{
+                          left: 50%;
+                          position: relative;
+                          transform: translateX(-50%);
+                          margin-top: 50px !important;
+                          height: 0 auto;
+                          transition: width 2s;
+                          width: 0 auto;
+                          max-width: 900px;
+                       }
+                         .game_hands_choosed .hand_scissors button,
+                          .game_hands_choosed .hand_rock button,
+                            .game_hands_choosed .hand_paper button{
+                           height: 100px;
+                           width: 100px;
+                           border-radius: 50%;
+                           margin:0px;
+                           background: #fff;
+                         }
+                         .game_hands_choosed .hand_none button{
+                           height: 100px;
+                           width: 100px;
+                           border-radius: 50%;
+                           margin-top:30px;
+                           background: rgba(00, 00, 50, 0.5);
+                         }
+                         .game_hands_choosed .you_picked,
+                          .game_hands_choosed .house_picked{
+                           position: absolute;
+                           padding: 20px;
+                           height: 190px;
+                           width: 50%;
+                           left:5%;
+                           text-align: center;
+                           top: 0px;
+                         }
+                        .game_hands_choosed .you_picked{
+
+                        }
+                        .game_hands_choosed .house_picked{
+                          left: 50%;
+                        }
+                            .game_hands_choosed .house_picked button,
+                              .game_hands_choosed .you_picked button{
+                                height: 110px;
+                                width: 110px;
+                            }
+                            .game_hands_choosed .house_picked div:last-child,
+                              .game_hands_choosed .you_picked div:last-child{
+                                position: absolute;
+                                left: 25%;
+                                top: 10%;
+                                height: 110px;
+                                width: 110px;
+                                padding: 0px;
+                            }
+                            .game_hands_choosed .house_picked label,
+                              .game_hands_choosed .you_picked label{
+                                position: absolute;
+                                bottom: 0px;
+                                left: 0px;
+                                top: 130px;
+                                font-size: 15px;
+                                font-weight: bold;
+                                color: #fff;
+                                margin-top:20px;
+                                margin-left: 0px;
+                                width: 100%;
+                                margin-bottom: 30px;
+                            }
+                           .game_hands_choosed .hand_scissors img,
+                             .game_hands_choosed .hand_rock img,
+                               .game_hands_choosed .hand_paper img{
+                                   height: 35px;
+                           }
+                             .game_hands_choosed .hand_scissors button{
+                               border: solid 10px #efa520;
+                             }
+                             .game_hands_choosed .hand_rock button{
+                                 border: solid 10px #e03c5b;
+                             }
+                             .game_hands_choosed .hand_paper button{
+                                 border: solid 10px #506ff5;
+                             }
+                             .game_hands_choosed .hand_none button{
+                                 border: none;
+                                 margin-top: 0px;
+                             }
+
+                             .game_hands_choosed .result_game{
+                                position: absolute;
+                                top: 180px;
+                                height: 100px;
+                                padding: 0px;
+                                margin: 0px;
+                                width: 90%;
+                                left: 10%;
+                                text-align: center;
+                             }
+                               .game_hands_choosed .result_game .you_win_lose{
+                                  width: 100%;
+                                  padding: 0px;
+                                  margin: 0px;
+                               }
+                                 .game_hands_choosed .result_game .you_win_lose label{
+                                    font-size: 35px;
+                                    color: #fff;
+                                    font-weight: bold;
+                                 }
+                               .game_hands_choosed .result_game .btn{
+                                  width: 100%;
+                                  padding: 0px;
+                                  margin-top: 0px;
+                               }
+                                 .game_hands_choosed .result_game .btn button{
+                                   width: 200px;
+                                   height: 40px;
+                                   margin: 0px;
+                                   border:none;
+                                   border-radius: 6px;
+                                   color: none;
+                                 }
+                                   .game_hands_choosed .result_game .btn button:hover{
+                                      color: #d00;
+                                   }
+
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+
+  </head>
+  <body>
+
+
+      <div class="container_scoreboard row animated fadeIn col-lg-12 col-md-12 col-sm-12">
+          <div class="scoreboard row col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-10 offset-1">
+              <div class="label row col-1 col-lg-1 col-md-1">
+                <label class="font-weight-bold">ROCK PAPER SCISSORS</label>
+              </div>
+              <div class="score row col-3 offset-8 col-lg-2 col-md-2 offset-md-9 offset-lg-9 ">
+                <label class="score_label">SCORE</label>
+                <label class="value">0</label>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="game_hands row animated fadeIn col-12 col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+          <div class="triangle">
+              <img src="images/bg-triangle.svg" alt="">
+          </div>
+
+          <div class="hand_paper col-6">
+              <button data-name="hand_paper">
+                <img src="images/icon-paper.svg" alt="">
+              </button>
+          </div>
+
+          <div class="hand_scissors col-6">
+            <button data-name="hand_scissors">
+              <img src="images/icon-scissors.svg" alt="">
+            </button>
+          </div>
+
+          <div class="hand_rock col-6">
+            <button data-name="hand_rock">
+              <img src="images/icon-rock.svg" alt="">
+            </button>
+          </div>
+
+      </div>
+
+
+      <div style="display:none" class="game_hands_choosed row animated fadeIn col-12 ">
+
+
+        <div class="you_picked">
+          <!-- <div class="label">
+            <label>YOU PICKED</label>
+          </div>
+          <div class="hand_rock">
+            <button>
+              <img src="images/icon-rock.svg" alt="">
+            </button>
+          </div> -->
+        </div>
+
+        <div class="result_game">
+          <!-- <div class="you_win_lose">
+            <label>YOU LOSE</label>
+          </div>
+          <div class="btn">
+            <button>PLAY AGAIN</button>
+          </div> -->
+        </div>
+
+        <div class="house_picked">
+          <div class="label">
+            <label>THE HOUSE PICKED</label>
+          </div>
+          <div class="hand_none">
+            <button>
+              <img src="" alt="">
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="container_blank" style="display: none">
+        <div class="blank"></div>
+        <div class="container_rules">
+
+            <div class="close">
+                <label>RULES</label>
+                <button name="button" onclick="closeRules()"> <img src="images/icon-close.svg" alt=""> </button>
+            </div>
+
+            <div class="image-rules">
+                <img src="images/image-rules.svg" alt="">
+            </div>
+
+        </div>
+      </div>
+
+      <div class="rules row animated fadeIn col-lg-12 col-md-12 offset-md-0 offset-lg-0 " >
+        <button class="btn col-4 offset-4 col-lg-1 offset-lg-11 col-md-2 offset-md-5 " onclick="openRules()">
+          RULES
+        </button>
+      </div>
+
+
+
+      <script type='text/javascript' src='js/jquery-3.6.0.min.js'></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+    	<script type="text/javascript" src="js/default.js" ></script>
+  </body>
+</html>
